@@ -1,6 +1,7 @@
 'use client'
 import React, { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
+import Link from 'next/link';
 
 const Navigation = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -79,10 +80,11 @@ const Navigation = () => {
             </div>
 
             {/* CTA Button - Desktop */}
+            <a href="Shruti_Resume.pdf" download>
             <button className="hidden md:block px-6 py-2 bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg text-white font-medium hover:shadow-lg hover:shadow-purple-500/50 transition-all duration-300 hover:scale-105">
               Resume
             </button>
-
+            </a>
             {/* Mobile Menu Button */}
             <button
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
@@ -96,10 +98,10 @@ const Navigation = () => {
         {/* Mobile Menu */}
         <div
           className={`md:hidden overflow-hidden transition-all duration-300 ${
-            isMobileMenuOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
+            isMobileMenuOpen ? 'max-h-screen opacity-100' : 'max-h-0 opacity-0'
           }`}
         >
-          <div className="px-6 py-4 bg-slate-900/95 backdrop-blur-md border-t border-slate-800">
+          <div className="max-h-screen overflow-y-auto px-6 py-4 bg-slate-900/95 backdrop-blur-md border-t border-slate-800">
             {navItems.map((item) => (
               <button
                 key={item.id}
@@ -113,11 +115,18 @@ const Navigation = () => {
                 {item.label}
               </button>
             ))}
-            <button className="w-full mt-4 px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg text-white font-medium hover:shadow-lg hover:shadow-purple-500/50 transition-all duration-300">
+
+            {/* Resume Button */}
+            <a
+              href="/Shruti_Resume.pdf"
+              download
+              className="block w-full mt-4 px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg text-white font-medium text-center hover:shadow-lg hover:shadow-purple-500/50 transition-all duration-300"
+            >
               Resume
-            </button>
+            </a>
           </div>
         </div>
+
       </nav>
     </>
   );
