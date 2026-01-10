@@ -139,7 +139,12 @@ const HeroSection = () => {
 
         {/* Scroll Indicator */}
         <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce">
-          <ArrowDown className="text-slate-500" size={32} />
+          <ArrowDown onClick={() => {
+              document.getElementById("about")?.scrollIntoView({
+                behavior: "smooth",
+              });
+            }}
+            className="text-slate-500" size={32} />
         </div>
       </div>
 
