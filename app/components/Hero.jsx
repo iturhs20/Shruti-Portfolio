@@ -8,9 +8,9 @@ const HeroSection = () => {
 
   const roles = [
     "Full Stack Developer",
+    "AI/ML Developer",
     "React Enthusiast",
-    "Problem Solver",
-    "UI/UX Designer"
+    "Python Developer"
   ];
 
   useEffect(() => {
@@ -33,9 +33,9 @@ const HeroSection = () => {
   }, []);
 
   const socialLinks = [
-    { icon: Github, href: "https://github.com/yourusername", label: "GitHub" },
-    { icon: Linkedin, href: "https://linkedin.com/in/yourusername", label: "LinkedIn" },
-    { icon: Mail, href: "mailto:your.email@example.com", label: "Email" }
+    { icon: Github, href: "https://github.com/iturhs20", label: "GitHub" },
+    { icon: Linkedin, href: "https://www.linkedin.com/in/shrutipatil20/", label: "LinkedIn" },
+    { icon: Mail, href: "mailto:patilshruti7273@gmail.com?subject=Hello%20Shruti&body=I%20came%20across%20your%20portfolio", label: "Email" }
   ];
 
   return (
@@ -92,14 +92,34 @@ const HeroSection = () => {
 
         {/* CTA Buttons */}
         <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16 animate-fade-in-up">
-          <button className="group px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full text-white font-semibold hover:shadow-2xl hover:shadow-purple-500/50 transition-all duration-300 hover:scale-105">
+          {/* View My Work */}
+          <button
+            onClick={() => {
+              document.getElementById("projects")?.scrollIntoView({
+                behavior: "smooth",
+              });
+            }}
+            className="group px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full text-white font-semibold hover:shadow-2xl hover:shadow-purple-500/50 transition-all duration-300 hover:scale-105"
+          >
             View My Work
-            <span className="inline-block ml-2 group-hover:translate-x-1 transition-transform">→</span>
+            <span className="inline-block ml-2 group-hover:translate-x-1 transition-transform">
+              →
+            </span>
           </button>
-          <button className="px-8 py-4 bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-full text-slate-300 font-semibold hover:bg-slate-800 hover:border-purple-500/50 transition-all duration-300 hover:scale-105">
+
+          {/* Get In Touch */}
+          <button
+            onClick={() => {
+              document.getElementById("contact")?.scrollIntoView({
+                behavior: "smooth",
+              });
+            }}
+            className="px-8 py-4 bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-full text-slate-300 font-semibold hover:bg-slate-800 hover:border-purple-500/50 transition-all duration-300 hover:scale-105"
+          >
             Get In Touch
           </button>
         </div>
+
 
         {/* Social Links */}
         <div className="flex gap-6 justify-center mb-16 animate-fade-in-up">
