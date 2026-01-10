@@ -3,43 +3,43 @@ import React from 'react';
 import { Code2, Palette, Rocket, Users } from 'lucide-react';
 
 const AboutSection = () => {
-  const highlights = [
-    {
-      icon: Code2,
-      title: "Clean Code",
-      description: "Writing maintainable and scalable solutions"
-    },
-    {
-      icon: Palette,
-      title: "Design Focus",
-      description: "Creating beautiful user experiences"
-    },
-    {
-      icon: Rocket,
-      title: "Fast Delivery",
-      description: "Efficient project execution"
-    },
-    {
-      icon: Users,
-      title: "Collaboration",
-      description: "Strong team player and communicator"
-    }
-  ];
+  // const highlights = [
+  //   {
+  //     icon: Code2,
+  //     title: "Clean Code",
+  //     description: "Writing maintainable and scalable solutions"
+  //   },
+  //   {
+  //     icon: Palette,
+  //     title: "Design Focus",
+  //     description: "Creating beautiful user experiences"
+  //   },
+  //   {
+  //     icon: Rocket,
+  //     title: "Fast Delivery",
+  //     description: "Efficient project execution"
+  //   },
+  //   {
+  //     icon: Users,
+  //     title: "Collaboration",
+  //     description: "Strong team player and communicator"
+  //   }
+  // ];
 
-  const techStack = [
-    { name: "React", category: "Frontend" },
-    { name: "Next.js", category: "Frontend" },
-    { name: "TypeScript", category: "Language" },
-    { name: "Tailwind CSS", category: "Styling" },
-    { name: "Node.js", category: "Backend" },
-    { name: "Express", category: "Backend" },
-    { name: "MongoDB", category: "Database" },
-    { name: "PostgreSQL", category: "Database" },
-    { name: "Git", category: "Tools" },
-    { name: "Docker", category: "Tools" },
-    { name: "AWS", category: "Cloud" },
-    { name: "Figma", category: "Design" }
-  ];
+  // const techStack = [
+  //   { name: "React", category: "Frontend" },
+  //   { name: "Next.js", category: "Frontend" },
+  //   { name: "TypeScript", category: "Language" },
+  //   { name: "Tailwind CSS", category: "Styling" },
+  //   { name: "Node.js", category: "Backend" },
+  //   { name: "Express", category: "Backend" },
+  //   { name: "MongoDB", category: "Database" },
+  //   { name: "PostgreSQL", category: "Database" },
+  //   { name: "Git", category: "Tools" },
+  //   { name: "Docker", category: "Tools" },
+  //   { name: "AWS", category: "Cloud" },
+  //   { name: "Figma", category: "Design" }
+  // ];
 
   return (
     <section id="about" className="relative py-20 bg-slate-950 overflow-hidden">
@@ -68,10 +68,7 @@ const AboutSection = () => {
                 <div className="aspect-square rounded-xl bg-gradient-to-br from-purple-500/20 to-pink-500/20 flex items-center justify-center relative overflow-hidden">
                   <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PHBhdHRlcm4gaWQ9ImdyaWQiIHdpZHRoPSI0MCIgaGVpZ2h0PSI0MCIgcGF0dGVyblVuaXRzPSJ1c2VyU3BhY2VPblVzZSI+PHBhdGggZD0iTSAwIDEwIEwgNDAgMTAgTSAxMCAwIEwgMTAgNDAgTSAwIDIwIEwgNDAgMjAgTSAyMCAwIEwgMjAgNDAgTSAwIDMwIEwgNDAgMzAgTSAzMCAwIEwgMzAgNDAiIGZpbGw9Im5vbmUiIHN0cm9rZT0id2hpdGUiIHN0cm9rZS1vcGFjaXR5PSIwLjAzIiBzdHJva2Utd2lkdGg9IjEiLz48L3BhdHRlcm4+PC9kZWZzPjxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JpZCkiLz48L3N2Zz4=')] opacity-50" />
                   {/* Replace this div with: <img src="/your-photo.jpg" alt="Shruti Patil" className="w-full h-full object-cover rounded-xl" /> */}
-                  <div className="text-center text-slate-400 z-10">
-                    <Code2 size={64} className="mx-auto mb-4 text-purple-400" />
-                    <p className="text-sm">Your Photo Here</p>
-                  </div>
+                  <img src="/Shruti.jpeg" alt="Shruti Patil" className="w-full h-full object-cover rounded-xl" />
                 </div>
               </div>
               
@@ -87,25 +84,28 @@ const AboutSection = () => {
               Hi, I'm <span className="text-purple-400">Shruti Patil</span>
             </h3>
             <p className="text-slate-300 leading-relaxed text-lg">
-              I'm a passionate Full Stack Developer with a love for creating elegant solutions to complex problems. 
-              With expertise in modern web technologies, I specialize in building responsive and user-friendly applications.
+              I’m a curious and passionate developer who enjoys turning ideas into meaningful digital experiences.
             </p>
             <p className="text-slate-400 leading-relaxed">
-              My journey in web development started 3 years ago, and since then, I've worked on numerous projects 
-              ranging from e-commerce platforms to interactive dashboards. I believe in writing clean, maintainable 
-              code and staying updated with the latest industry trends.
+              Over the past few years, I’ve worked on projects ranging from smart web applications to impactful tech solutions, always focusing on simplicity and usability.
             </p>
             <p className="text-slate-400 leading-relaxed">
-              When I'm not coding, you can find me exploring new technologies, contributing to open-source projects, 
-              or sharing my knowledge through blog posts and mentoring.
+              When I’m not coding, I love exploring new technologies, learning continuously, and finding creative ways to solve real-world problems.
             </p>
 
             {/* Stats or CTA */}
             <div className="flex gap-4 pt-4">
+              <a href="Shruti_Resume.pdf" download>
               <button className="px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg text-white font-medium hover:shadow-lg hover:shadow-purple-500/50 transition-all duration-300 hover:scale-105">
                 Download CV
               </button>
-              <button className="px-6 py-3 bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-lg text-slate-300 font-medium hover:bg-slate-800 hover:border-purple-500/50 transition-all duration-300">
+              </a>
+              <button onClick={() => {
+                document.getElementById("contact")?.scrollIntoView({
+                  behavior: "smooth",
+                });
+              }}
+              className="px-6 py-3 bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-lg text-slate-300 font-medium hover:bg-slate-800 hover:border-purple-500/50 transition-all duration-300">
                 Contact Me
               </button>
             </div>
@@ -113,7 +113,7 @@ const AboutSection = () => {
         </div>
 
         {/* Highlights Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-20">
+        {/* <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-20">
           {highlights.map((item, index) => (
             <div
               key={index}
@@ -126,10 +126,10 @@ const AboutSection = () => {
               <p className="text-slate-400 text-sm">{item.description}</p>
             </div>
           ))}
-        </div>
+        </div> */}
 
         {/* Tech Stack */}
-        <div className="text-center">
+        {/* <div className="text-center">
           <h3 className="text-2xl md:text-3xl font-bold text-white mb-8">
             Tech <span className="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">Stack</span>
           </h3>
@@ -146,7 +146,7 @@ const AboutSection = () => {
               </div>
             ))}
           </div>
-        </div>
+        </div> */}
       </div>
 
       {/* Animation Styles */}
