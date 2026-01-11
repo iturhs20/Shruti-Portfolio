@@ -5,45 +5,45 @@ import { GraduationCap, Award, BookOpen, Calendar } from 'lucide-react';
 const EducationSection = () => {
   const education = [
     {
-      degree: "Master of Science in Computer Science",
-      institution: "Stanford University",
-      location: "Stanford, CA",
-      period: "2017 - 2019",
-      grade: "GPA: 3.9/4.0",
-      description: "Specialized in Artificial Intelligence and Machine Learning. Completed thesis on Deep Learning applications in web development.",
+      degree: "Master of Science in Computing (Artificial Intelligence)",
+      institution: "Dublin Ciy University",
+      location: "Dublin, Ireland",
+      period: "Expected 2026",
+      description: "Focused on Artificial Intelligence with strong emphasis on Machine Learning, Deep Learning, and scalable AI systems. Gaining hands-on experience through projects, coursework, and AI practicum.",
       achievements: [
-        "Dean's List all semesters",
-        "Published research paper on Neural Networks",
-        "Teaching Assistant for Web Development course"
+        "Hands-on experience with LLMs, RAG pipelines, and cloud-based AI solutions",
+        "Coursework in Machine Learning, Deep Learning, Data Analytics, and AI Practicum",
+        "Strong focus on scalable systems and real-world AI applications"
       ],
       icon: GraduationCap
     },
     {
-      degree: "Bachelor of Science in Software Engineering",
-      institution: "University of California, Berkeley",
-      location: "Berkeley, CA",
-      period: "2013 - 2017",
-      grade: "GPA: 3.7/4.0",
-      description: "Comprehensive study of software development principles, algorithms, and system design. Active member of tech clubs.",
+      degree: "Bachelor of Technology in Computer Engineering",
+      institution: "University of Mumbai",
+      location: "Mumbai, India",
+      period: "2021 - 2025",
+      description: "Strong foundation in computer engineering with focus on software development, algorithms, and data-driven applications, supported by hands-on projects and research work.",
       achievements: [
-        "Graduated with Honors",
-        "Led university hackathon team to victory",
-        "President of Computer Science Club"
+        "Awarded Best Innovative Solution for final year project MediSense",
+        "Published two research papers in national and international conferences",
+        "Winner at an international hackathon",
+        "Received pre-incubation support for final year project MediSense",
+        "Co-Lead, AlgoZenith Campus Connection Program"
       ],
       icon: BookOpen
     }
   ];
 
-  const courses = [
-    "Advanced Web Development",
-    "Data Structures & Algorithms",
-    "Database Systems",
-    "Software Architecture",
-    "Cloud Computing",
-    "Mobile App Development",
-    "Machine Learning",
-    "Cybersecurity"
-  ];
+  // const courses = [
+  //   "Advanced Web Development",
+  //   "Data Structures & Algorithms",
+  //   "Database Systems",
+  //   "Software Architecture",
+  //   "Cloud Computing",
+  //   "Mobile App Development",
+  //   "Machine Learning",
+  //   "Cybersecurity"
+  // ];
 
   return (
     <section id="education" className="relative py-20 bg-slate-900 overflow-hidden">
@@ -91,9 +91,9 @@ const EducationSection = () => {
                         <Calendar size={16} />
                         <span>{edu.period}</span>
                       </div>
-                      <span className="inline-block px-4 py-1 bg-purple-500/20 text-purple-400 rounded-full text-sm font-semibold">
+                      {/* <span className="inline-block px-4 py-1 bg-purple-500/20 text-purple-400 rounded-full text-sm font-semibold">
                         {edu.grade}
-                      </span>
+                      </span> */}
                     </div>
                   </div>
 
@@ -121,7 +121,7 @@ const EducationSection = () => {
         </div>
 
         {/* Relevant Courses */}
-        <div className="bg-slate-900/30 backdrop-blur-sm border border-slate-800 rounded-xl p-8">
+        {/* <div className="bg-slate-900/30 backdrop-blur-sm border border-slate-800 rounded-xl p-8">
           <h3 className="text-2xl font-bold text-white mb-6 flex items-center gap-3">
             <BookOpen className="text-purple-400" size={28} />
             Relevant Coursework
@@ -136,7 +136,7 @@ const EducationSection = () => {
               </div>
             ))}
           </div>
-        </div>
+        </div> */}
       </div>
     </section>
   );
