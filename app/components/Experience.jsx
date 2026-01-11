@@ -5,61 +5,50 @@ import { Briefcase, Calendar, MapPin } from 'lucide-react';
 const ExperienceTimeline = () => {
   const experiences = [
     {
-      title: "Senior Full Stack Developer",
-      company: "Tech Innovations Inc.",
-      location: "San Francisco, CA",
-      period: "Jan 2023 - Present",
-      type: "Full-time",
-      description: "Leading the development of scalable web applications using React, Node.js, and AWS. Managing a team of 5 developers and implementing best practices.",
-      achievements: [
-        "Reduced application load time by 40% through optimization",
-        "Implemented CI/CD pipeline reducing deployment time by 60%",
-        "Mentored 3 junior developers to mid-level positions"
-      ],
-      technologies: ["React", "Node.js", "AWS", "MongoDB", "Docker"]
-    },
-    {
-      title: "Full Stack Developer",
-      company: "Digital Solutions Ltd.",
-      location: "New York, NY",
-      period: "Jun 2021 - Dec 2022",
-      type: "Full-time",
-      description: "Developed and maintained multiple client projects including e-commerce platforms and CRM systems. Collaborated with cross-functional teams.",
-      achievements: [
-        "Built 5+ responsive web applications from scratch",
-        "Improved code quality by implementing testing frameworks",
-        "Increased client satisfaction score by 25%"
-      ],
-      technologies: ["React", "Express", "PostgreSQL", "Tailwind CSS"]
-    },
-    {
-      title: "Frontend Developer",
-      company: "StartUp Studio",
-      location: "Austin, TX",
-      period: "Mar 2020 - May 2021",
-      type: "Full-time",
-      description: "Focused on creating stunning user interfaces and seamless user experiences. Worked closely with designers to implement pixel-perfect designs.",
-      achievements: [
-        "Redesigned main product resulting in 35% increase in user engagement",
-        "Created reusable component library used across 10+ projects",
-        "Reduced bug reports by 50% through thorough testing"
-      ],
-      technologies: ["React", "JavaScript", "CSS3", "Figma"]
-    },
-    {
-      title: "Junior Web Developer",
-      company: "Web Agency Co.",
-      location: "Remote",
-      period: "Jan 2019 - Feb 2020",
-      type: "Contract",
-      description: "Started my professional journey building websites for small businesses. Learned fundamental web development practices and client communication.",
-      achievements: [
-        "Delivered 15+ client websites on time and within budget",
-        "Achieved 95% client satisfaction rate",
-        "Learned modern development practices and workflows"
-      ],
-      technologies: ["HTML", "CSS", "JavaScript", "WordPress"]
-    }
+    title: "Full Stack Web Developer",
+    company: "Unica Token Pvt. Ltd.",
+    location: "Mumbai, India",
+    period: "Feb 2025 – May 2025",
+    type: "Internship",
+    description:
+      "Worked on building and optimizing scalable full-stack web applications with a focus on performance, reliability, and clean architecture.",
+    achievements: [
+      "Developed full-stack applications using Next.js and MERN stack",
+      "Improved application performance by approximately 25% through algorithm and code optimization",
+      "Built backend services and data pipelines for high-throughput processing",
+      "Implemented CI/CD workflows using GitHub Actions for automated testing and deployment"
+    ],
+    technologies: [
+      "Next.js",
+      "React",
+      "Node.js",
+      "MongoDB",
+      "Flask",
+      "GitHub Actions"
+    ]
+  },
+  {
+    title: "Web Development HR Intern",
+    company: "Derest Marketing",
+    location: "Mumbai, India",
+    period: "Aug 2021 – Jan 2022",
+    type: "Internship",
+    description:
+      "Supported web development initiatives while coordination tasks for technical roles.",
+    achievements: [
+      "Contributed to website development and content updates",
+      "Coordinated between technical teams and management for project needs",
+      "Gained early exposure to both technical and people management processes"
+    ],
+    technologies: [
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "WordPress",
+      "Basic Web Design Tools"
+    ]
+}
+
   ];
 
   return (
@@ -89,7 +78,7 @@ const ExperienceTimeline = () => {
               <div className={`flex flex-col md:flex-row gap-8 items-center ${index % 2 === 0 ? 'md:flex-row-reverse' : ''}`}>
                 
                 {/* Content Card */}
-                <div className={`w-full md:w-5/12 ${index % 2 === 0 ? 'md:text-right' : ''}`}>
+                <div className={`w-full md:w-5/12 ${index % 2 === 0 ? 'md:text-left' : ''}`}>
                   <div className="group p-6 bg-slate-950/50 backdrop-blur-sm border border-slate-800 rounded-xl hover:border-purple-500/50 transition-all duration-300 hover:transform hover:scale-105">
                     {/* Header */}
                     <div className="mb-4">
@@ -160,11 +149,11 @@ const ExperienceTimeline = () => {
         </div>
 
         {/* Download Resume CTA */}
-        <div className="text-center mt-16">
+        {/* <div className="text-center mt-16">
           <button className="px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full text-white font-semibold hover:shadow-2xl hover:shadow-purple-500/50 transition-all duration-300 hover:scale-105">
             Download Full Resume
           </button>
-        </div>
+        </div> */}
       </div>
     </section>
   );
