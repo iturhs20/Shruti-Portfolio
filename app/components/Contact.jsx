@@ -1,55 +1,36 @@
-'use client'
-import React, { useState } from 'react';
-import { Mail, Phone, MapPin, Send, Github, Linkedin, Twitter, MessageSquare } from 'lucide-react';
+'use client';
 
-const ContactSection = () => {
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    subject: '',
-    message: ''
-  });
+import React from "react";
+import { useForm, ValidationError } from "@formspree/react";
+import { Mail, Phone, MapPin, Send, Github, Linkedin } from "lucide-react";
 
-  const handleChange = (e) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value
-    });
-  };
-
-  const handleSubmit = () => {
-    // Handle form submission logic here
-    console.log('Form submitted:', formData);
-    // Reset form
-    setFormData({ name: '', email: '', subject: '', message: '' });
-  };
+export default function ContactSection() {
+  const [state, handleSubmit] = useForm("xykkyyej");
 
   const contactInfo = [
     {
       icon: Mail,
       title: "Email",
-      value: "shruti.patil@example.com",
-      link: "mailto:shruti.patil@example.com"
+      value: "patilshruti7273@gmail.com",
+      link: "mailto:patilshruti7273@gmail.com",
     },
     {
       icon: Phone,
       title: "Phone",
-      value: "+1 (555) 123-4567",
-      link: "tel:+15551234567"
+      value: "+353 0894291886",
+      link: "tel:+3530894291886",
     },
     {
       icon: MapPin,
       title: "Location",
-      value: "San Francisco, CA",
-      link: null
-    }
+      value: "Dublin, Ireland",
+      link: null,
+    },
   ];
 
   const socialLinks = [
-    { icon: Github, href: "https://github.com/yourusername", label: "GitHub" },
-    { icon: Linkedin, href: "https://linkedin.com/in/yourusername", label: "LinkedIn" },
-    { icon: Twitter, href: "https://twitter.com/yourusername", label: "Twitter" },
-    { icon: MessageSquare, href: "https://discord.com/users/yourid", label: "Discord" }
+    { icon: Github, href: "https://github.com/iturhs20", label: "GitHub" },
+    { icon: Linkedin, href: "https://www.linkedin.com/in/shrutipatil20/", label: "LinkedIn" },
   ];
 
   return (
@@ -59,20 +40,25 @@ const ContactSection = () => {
       <div className="absolute bottom-40 right-0 w-96 h-96 bg-pink-500 rounded-full mix-blend-multiply filter blur-3xl opacity-10" />
 
       <div className="relative z-10 max-w-7xl mx-auto px-6">
-        {/* Section Header */}
+        {/* Header */}
         <div className="text-center mb-16">
-          <span className="text-purple-400 font-semibold text-sm uppercase tracking-wider">Get In Touch</span>
+          <span className="text-purple-400 font-semibold text-sm uppercase tracking-wider">
+            Get In Touch
+          </span>
           <h2 className="text-4xl md:text-5xl font-bold text-white mt-2 mb-4">
-            Let's Work <span className="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">Together</span>
+            Let's Work{" "}
+            <span className="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
+              Together
+            </span>
           </h2>
           <div className="w-24 h-1 bg-gradient-to-r from-purple-500 to-pink-500 mx-auto rounded-full" />
           <p className="text-slate-400 mt-4 max-w-2xl mx-auto">
-            Have a project in mind or want to collaborate? Feel free to reach out. I'm always open to discussing new opportunities and ideas.
+            Have a project in mind or want to collaborate? Send me a message — I’ll get back to you soon.
           </p>
         </div>
 
         <div className="grid md:grid-cols-2 gap-12">
-          {/* Left Side - Contact Info */}
+          {/* Left Side */}
           <div className="space-y-8">
             <div>
               <h3 className="text-2xl font-bold text-white mb-6">Contact Information</h3>
@@ -119,99 +105,118 @@ const ContactSection = () => {
               </div>
             </div>
 
-            {/* Availability Status */}
+            {/* Availability */}
             <div className="p-6 bg-gradient-to-br from-purple-500/10 to-pink-500/10 backdrop-blur-sm border border-purple-500/30 rounded-xl">
               <div className="flex items-center gap-3 mb-3">
                 <div className="relative">
                   <div className="w-3 h-3 bg-green-500 rounded-full" />
-                  <div className="absolute inset-0 w-3 h-3 bg-green-500 rounded-full animate-ping" />
+                  <div className="absolute inset-0 w-3 h-3 bg-green-500 rounded-full animate-ping opacity-75" />
                 </div>
                 <h4 className="text-white font-semibold">Currently Available</h4>
               </div>
               <p className="text-slate-400 text-sm">
-                Open to freelance projects and full-time opportunities. Expected response time: 24-48 hours.
+                Open to freelance projects and full-time opportunities.
               </p>
             </div>
           </div>
 
-          {/* Right Side - Contact Form */}
+          {/* Right Side - Form */}
           <div className="bg-slate-900/50 backdrop-blur-sm border border-slate-800 rounded-xl p-8">
             <h3 className="text-2xl font-bold text-white mb-6">Send Me a Message</h3>
-            <div className="space-y-6">
-              {/* Name Input */}
-              <div>
-                <label className="block text-slate-300 font-medium mb-2">
-                  Your Name
-                </label>
-                <input
-                  type="text"
-                  name="name"
-                  value={formData.name}
-                  onChange={handleChange}
-                  className="w-full px-4 py-3 bg-slate-800/50 border border-slate-700 rounded-lg text-white placeholder-slate-500 focus:outline-none focus:border-purple-500 transition-colors"
-                  placeholder="John Doe"
-                />
-              </div>
 
-              {/* Email Input */}
-              <div>
-                <label className="block text-slate-300 font-medium mb-2">
-                  Your Email
-                </label>
-                <input
-                  type="email"
-                  name="email"
-                  value={formData.email}
-                  onChange={handleChange}
-                  className="w-full px-4 py-3 bg-slate-800/50 border border-slate-700 rounded-lg text-white placeholder-slate-500 focus:outline-none focus:border-purple-500 transition-colors"
-                  placeholder="john@example.com"
-                />
+            {state.succeeded ? (
+              <div className="p-6 rounded-xl border border-green-500/30 bg-green-500/10">
+                <p className="text-green-300 font-semibold text-lg">Message sent ✅</p>
+                <p className="text-slate-300 mt-2">
+                  Thanks for reaching out! I’ll get back to you soon.
+                </p>
               </div>
+            ) : (
+              <form onSubmit={handleSubmit} className="space-y-6">
+                {/* Name */}
+                <div>
+                  <label className="block text-slate-300 font-medium mb-2" htmlFor="name">
+                    Your Name
+                  </label>
+                  <input
+                    id="name"
+                    type="text"
+                    name="name"
+                    required
+                    className="w-full px-4 py-3 bg-slate-800/50 border border-slate-700 rounded-lg text-white placeholder-slate-500 focus:outline-none focus:border-purple-500 transition-colors"
+                    placeholder="Your name"
+                  />
+                  <ValidationError prefix="Name" field="name" errors={state.errors} />
+                </div>
 
-              {/* Subject Input */}
-              <div>
-                <label className="block text-slate-300 font-medium mb-2">
-                  Subject
-                </label>
-                <input
-                  type="text"
-                  name="subject"
-                  value={formData.subject}
-                  onChange={handleChange}
-                  className="w-full px-4 py-3 bg-slate-800/50 border border-slate-700 rounded-lg text-white placeholder-slate-500 focus:outline-none focus:border-purple-500 transition-colors"
-                  placeholder="Project Inquiry"
-                />
-              </div>
+                {/* Email */}
+                <div>
+                  <label className="block text-slate-300 font-medium mb-2" htmlFor="email">
+                    Your Email
+                  </label>
+                  <input
+                    id="email"
+                    type="email"
+                    name="email"
+                    required
+                    className="w-full px-4 py-3 bg-slate-800/50 border border-slate-700 rounded-lg text-white placeholder-slate-500 focus:outline-none focus:border-purple-500 transition-colors"
+                    placeholder="john@example.com"
+                  />
+                  <ValidationError prefix="Email" field="email" errors={state.errors} />
+                </div>
 
-              {/* Message Textarea */}
-              <div>
-                <label className="block text-slate-300 font-medium mb-2">
-                  Message
-                </label>
-                <textarea
-                  name="message"
-                  value={formData.message}
-                  onChange={handleChange}
-                  rows={5}
-                  className="w-full px-4 py-3 bg-slate-800/50 border border-slate-700 rounded-lg text-white placeholder-slate-500 focus:outline-none focus:border-purple-500 transition-colors resize-none"
-                  placeholder="Tell me about your project..."
-                />
-              </div>
+                {/* Subject */}
+                <div>
+                  <label className="block text-slate-300 font-medium mb-2" htmlFor="subject">
+                    Subject
+                  </label>
+                  <input
+                    id="subject"
+                    type="text"
+                    name="subject"
+                    required
+                    className="w-full px-4 py-3 bg-slate-800/50 border border-slate-700 rounded-lg text-white placeholder-slate-500 focus:outline-none focus:border-purple-500 transition-colors"
+                    placeholder="Project inquiry"
+                  />
+                  <ValidationError prefix="Subject" field="subject" errors={state.errors} />
+                </div>
 
-              {/* Submit Button */}
-              <button
-                onClick={handleSubmit}
-                className="w-full flex items-center justify-center gap-2 px-6 py-4 bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg text-white font-semibold hover:shadow-2xl hover:shadow-purple-500/50 transition-all duration-300 hover:scale-105"
-              >
-                <span>Send Message</span>
-                <Send size={18} />
-              </button>
-            </div>
+                {/* Message */}
+                <div>
+                  <label className="block text-slate-300 font-medium mb-2" htmlFor="message">
+                    Message
+                  </label>
+                  <textarea
+                    id="message"
+                    name="message"
+                    rows={5}
+                    required
+                    className="w-full px-4 py-3 bg-slate-800/50 border border-slate-700 rounded-lg text-white placeholder-slate-500 focus:outline-none focus:border-purple-500 transition-colors resize-none"
+                    placeholder="Tell me about your project..."
+                  />
+                  <ValidationError prefix="Message" field="message" errors={state.errors} />
+                </div>
+
+                {/* Submit */}
+                <button
+                  type="submit"
+                  disabled={state.submitting}
+                  className="w-full flex items-center justify-center gap-2 px-6 py-4 bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg text-white font-semibold hover:shadow-2xl hover:shadow-purple-500/50 transition-all duration-300 hover:scale-105 disabled:opacity-60 disabled:hover:scale-100"
+                >
+                  <span>{state.submitting ? "Sending..." : "Send Message"}</span>
+                  <Send size={18} />
+                </button>
+
+                {state.errors?.length > 0 && (
+                  <p className="text-red-400 text-sm">
+                    Please fix the errors above and try again.
+                  </p>
+                )}
+              </form>
+            )}
           </div>
         </div>
       </div>
     </section>
   );
-};
-
-export default ContactSection;
+}

@@ -8,19 +8,17 @@ const Footer = () => {
   };
 
   const socialLinks = [
-    { icon: Github, href: "https://github.com/yourusername", label: "GitHub" },
-    { icon: Linkedin, href: "https://linkedin.com/in/yourusername", label: "LinkedIn" },
-    { icon: Twitter, href: "https://twitter.com/yourusername", label: "Twitter" },
-    { icon: Mail, href: "mailto:your.email@example.com", label: "Email" }
+    { icon: Github, href: "https://github.com/iturhs20", label: "GitHub" },
+    { icon: Linkedin, href: "https://www.linkedin.com/in/shrutipatil20/", label: "LinkedIn" }
   ];
 
-  const quickLinks = [
-    { label: "Home", href: "#home" },
-    { label: "About", href: "#about" },
-    { label: "Skills", href: "#skills" },
-    { label: "Projects", href: "#projects" },
-    { label: "Contact", href: "#contact" }
-  ];
+  // const quickLinks = [
+  //   { label: "Home", href: "#home" },
+  //   { label: "About", href: "#about" },
+  //   { label: "Skills", href: "#skills" },
+  //   { label: "Projects", href: "#projects" },
+  //   { label: "Contact", href: "#contact" }
+  // ];
 
   const currentYear = new Date().getFullYear();
 
@@ -39,7 +37,7 @@ const Footer = () => {
               Shruti Patil
             </h3>
             <p className="text-slate-400 leading-relaxed">
-              Full Stack Developer passionate about creating beautiful and functional web experiences.
+              Full Stack & AI Developer passionate about creating beautiful and functional web experiences.
             </p>
             <div className="flex gap-4">
               {socialLinks.map((social, index) => (
@@ -59,7 +57,7 @@ const Footer = () => {
 
           {/* Quick Links */}
           <div className="space-y-4">
-            <h4 className="text-lg font-semibold text-white mb-4">Quick Links</h4>
+            {/* <h4 className="text-lg font-semibold text-white mb-4">Quick Links</h4>
             <ul className="space-y-3">
               {quickLinks.map((link, index) => (
                 <li key={index}>
@@ -72,7 +70,7 @@ const Footer = () => {
                   </a>
                 </li>
               ))}
-            </ul>
+            </ul> */}
           </div>
 
           {/* Contact Info */}
@@ -82,15 +80,15 @@ const Footer = () => {
               <p className="flex items-center gap-2">
                 <Mail size={18} className="text-purple-400" />
                 <a href="mailto:your.email@example.com" className="hover:text-purple-400 transition-colors">
-                  your.email@example.com
+                  patilshruti7273@gmail.com
                 </a>
               </p>
               <p className="text-sm leading-relaxed">
                 Open to new opportunities and collaborations. Feel free to reach out!
               </p>
-              <button className="mt-4 px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg text-white font-medium hover:shadow-lg hover:shadow-purple-500/50 transition-all duration-300 hover:scale-105">
+              {/* <button className="mt-4 px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg text-white font-medium hover:shadow-lg hover:shadow-purple-500/50 transition-all duration-300 hover:scale-105">
                 Download Resume
-              </button>
+              </button> */}
             </div>
           </div>
         </div>
