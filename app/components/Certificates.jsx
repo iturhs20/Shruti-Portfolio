@@ -5,64 +5,59 @@ import { Award, ExternalLink, CheckCircle, Calendar } from 'lucide-react';
 const CertificationsSection = () => {
   const certifications = [
     {
-      title: "AWS Certified Solutions Architect",
-      issuer: "Amazon Web Services",
-      date: "2023",
-      credentialId: "AWS-SA-2023-12345",
-      verifyUrl: "https://aws.amazon.com/verification",
-      status: "Active",
+      title: "Natural Language Processing with Classification and Vector Spaces",
+      issuer: "Coursera",
+      date: "Sept 2024",
+      credentialId: "Coursera-NLP-Vector-Spaces",
+      verifyUrl: "https://www.coursera.org/account/accomplishments/verify/8KJPW7G5KEWO",
+      status: "Completed",
+      color: "from-blue-500 to-purple-500",
+      description:
+        "Gained hands-on experience with NLP techniques including text classification, embeddings, and vector space models."
+    },
+    {
+      title: "AWS Academy Graduate – Cloud Developing",
+      issuer: "AWS Academy",
+      date: "April 2024",
+      credentialId: "AWS-Academy-Cloud-Developing",
+      verifyUrl: "https://www.credly.com/go/JSFh0WTj",
+      status: "Completed",
       color: "from-orange-500 to-yellow-500",
-      description: "Professional-level certification demonstrating expertise in designing distributed systems on AWS."
+      description:
+        "Developed foundational skills in cloud computing, AWS services, and cloud-based application development."
     },
     {
-      title: "Google Cloud Professional Developer",
-      issuer: "Google Cloud",
-      date: "2023",
-      credentialId: "GCP-DEV-2023-67890",
-      verifyUrl: "https://cloud.google.com/verification",
-      status: "Active",
-      color: "from-blue-500 to-cyan-500",
-      description: "Expertise in building scalable and reliable cloud-based applications using Google Cloud."
+      title: "React JS – Complete Guide for Frontend Web Development",
+      issuer: "Udemy",
+      date: "Aug 2024",
+      credentialId: "UC-35c51ef5-3514-4768-9829-fa3be5128698",
+      verifyUrl: "https://www.udemy.com/certificate/UC-35c51cf5-35f4-47b8-9a29-fa3be5128b98/",
+      status: "Completed",
+      color: "from-sky-500 to-blue-600",
+      description:
+        "Comprehensive hands-on course covering React fundamentals, components, hooks, state management, and modern frontend development practices."
     },
     {
-      title: "Meta Front-End Developer",
-      issuer: "Meta (Facebook)",
-      date: "2022",
-      credentialId: "META-FE-2022-11223",
-      verifyUrl: "https://meta.com/verification",
-      status: "Active",
-      color: "from-blue-600 to-blue-700",
-      description: "Comprehensive certification in modern front-end development practices and React."
+      title: "Complete Data Science & Machine Learning Course",
+      issuer: "Udemy",
+      date: "Aug 2024",
+      credentialId: "UC-ca418105-9e7f-4a22-9aba-fe80e0853673",
+      verifyUrl: "https://www.udemy.com/certificate/UC-ca418f05-9e7f-4e22-9aba-fe80e0853673/",
+      status: "Completed",
+      color: "from-green-500 to-emerald-600",
+      description:
+        "Covered end-to-end data science workflow including data preprocessing, machine learning algorithms, and practical model building."
     },
     {
-      title: "MongoDB Certified Developer",
-      issuer: "MongoDB University",
-      date: "2022",
-      credentialId: "MONGO-DEV-2022-44556",
-      verifyUrl: "https://university.mongodb.com/verification",
-      status: "Active",
-      color: "from-green-500 to-green-600",
-      description: "Advanced knowledge of MongoDB database design, queries, and performance optimization."
-    },
-    {
-      title: "Docker Certified Associate",
-      issuer: "Docker Inc.",
-      date: "2021",
-      credentialId: "DOCKER-2021-77889",
-      verifyUrl: "https://docker.com/verification",
-      status: "Active",
-      color: "from-blue-400 to-blue-600",
-      description: "Proficiency in containerization, orchestration, and Docker best practices."
-    },
-    {
-      title: "Certified Kubernetes Administrator",
-      issuer: "Cloud Native Computing Foundation",
-      date: "2021",
-      credentialId: "CKA-2021-99000",
-      verifyUrl: "https://cncf.io/verification",
-      status: "Active",
-      color: "from-indigo-500 to-purple-500",
-      description: "Expertise in Kubernetes cluster administration and management."
+      title: "Master Course in Artificial Intelligence & Deep Learning 3.0",
+      issuer: "Udemy",
+      date: "Oct 2024",
+      credentialId: "UC-ce92bccb-8288-4eab-a6ab-d3bf10e71d42",
+      verifyUrl: "https://www.udemy.com/certificate/UC-ce92bccb-82e8-4eab-a6ab-d3bf10e71d42/",
+      status: "Completed",
+      color: "from-purple-500 to-pink-500",
+      description:
+        "Introduced core AI and deep learning concepts, neural networks, and practical applications of AI systems."
     }
   ];
 
@@ -77,7 +72,7 @@ const CertificationsSection = () => {
         <div className="text-center mb-16">
           <span className="text-purple-400 font-semibold text-sm uppercase tracking-wider">Professional Credentials</span>
           <h2 className="text-4xl md:text-5xl font-bold text-white mt-2 mb-4">
-            Certifications & <span className="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">Licenses</span>
+            Certifications
           </h2>
           <div className="w-24 h-1 bg-gradient-to-r from-purple-500 to-pink-500 mx-auto rounded-full" />
         </div>
@@ -143,7 +138,7 @@ const CertificationsSection = () => {
         </div>
 
         {/* Stats Section */}
-        <div className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-6">
+        {/* <div className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-6">
           <div className="text-center p-6 bg-slate-800/30 backdrop-blur-sm border border-slate-800 rounded-xl">
             <div className="text-4xl font-bold bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent mb-2">
               {certifications.length}+
@@ -162,7 +157,7 @@ const CertificationsSection = () => {
             </div>
             <p className="text-slate-400">Top Technology Vendors</p>
           </div>
-        </div>
+        </div> */}
       </div>
     </section>
   );
