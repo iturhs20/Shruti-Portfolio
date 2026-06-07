@@ -20,6 +20,39 @@ const ProjectsGrid = () => {
       featured: true,
     },
     {
+      title: "ConsensusAI",
+      description:
+        "A collaborative annotation platform that enables teams to label datasets, track annotator performance, and generate consensus-driven outputs for AI/ML training pipelines.",
+      image: "/ConsensusAI.webp",
+      category: "ai",
+      technologies: ["Next.js", "Tailwind CSS", "Node.js", "Express.js", "Firebase", "Context API", "DaisyUI", "Vercel"],
+      liveUrl: "https://collaborative-annotation-platform.vercel.app/",
+      githubUrl: "https://github.com/iturhs20",
+      featured: true,
+    },
+    {
+      title: "Validium",
+      description:
+        "An ML-powered system that detects fraudulent Ethereum transactions in real time using predictive models and a monitoring dashboard for blockchain activity analysis.",
+      image: "/validium-project.webp",
+      category: "ml",
+      technologies: ["Python", "FastAPI", "Scikit-learn", "XGBoost", "Pandas", "Next.js", "Render"],
+      liveUrl: "https://validium-ai.vercel.app/",
+      githubUrl: "https://github.com/iturhs20",
+      featured: true,
+    },
+    {
+      title: "Gig Proof",
+      description:
+        "A decentralized freelancing marketplace that enables secure collaboration, transparent agreements and blockchain-powered payments between clients and freelancers.",
+      image: "/gig-proof-project.webp",
+      category: "blockchain",
+      technologies: ["Next.js", "Tailwind CSS", "Node.js", "Express.js", "Firebase", "Solana", "Smart Contracts", "Web3.js"],
+      liveUrl: "https://gig-proof.vercel.app/",
+      githubUrl: "https://github.com/iturhs20",
+      featured: false,
+    },
+    {
       title: "Zenith-AI",
       description:
         "GenAI-powered banking assistant that simplifies everyday banking tasks through conversational AI and intelligent automation.",
@@ -28,7 +61,7 @@ const ProjectsGrid = () => {
       technologies: ["Next.js", "Flask", "LangChain", "ChromaDB", "Tailwind CSS"],
       liveUrl: "https://zenith-ai-bob.vercel.app/",
       githubUrl: "https://github.com/iturhs20",
-      featured: true,
+      featured: false,
     },
     {
       title: "Creative Techscapes",
@@ -39,7 +72,7 @@ const ProjectsGrid = () => {
       technologies: ["React", "Next.js", "Tailwind CSS"],
       liveUrl: "https://creative-techscapes.vercel.app/",
       githubUrl: "https://github.com/iturhs20",
-      featured: true,
+      featured: false,
     },
     {
       title: "Nimiora Scents",
@@ -50,7 +83,7 @@ const ProjectsGrid = () => {
       technologies: ["Next.js", "React", "Tailwind CSS", "Responsive Design", "Vercel"],
       liveUrl: "https://scents-website.vercel.app/",
       githubUrl: "https://github.com/iturhs20",
-      featured: true,
+      featured: false,
     },
     {
       title: "Mental Health Prediction System",

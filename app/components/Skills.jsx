@@ -16,33 +16,38 @@ const SkillsSection = () => {
   ];
 
   const skills = [
+    // Frontend
     { name: 'React', level: 90, category: 'frontend', color: '#61DAFB' },
-    { name: 'Next.js', level: 85, category: 'frontend', color: '#FFFFFF' },
-    { name: 'TypeScript', level: 88, category: 'frontend', color: '#3178C6' },
+    { name: 'Next.js', level: 88, category: 'frontend', color: '#FFFFFF' },
+    { name: 'TypeScript', level: 85, category: 'frontend', color: '#3178C6' },
     { name: 'Tailwind CSS', level: 92, category: 'frontend', color: '#06B6D4' },
-    { name: 'JavaScript', level: 90, category: 'frontend', color: '#F7DF1E' },
-    { name: 'HTML/CSS', level: 95, category: 'frontend', color: '#E34F26' },
 
+    // Backend
     { name: 'Node.js', level: 85, category: 'backend', color: '#339933' },
-    { name: 'Express', level: 82, category: 'backend', color: '#FFFFFF' },
-    { name: 'Python', level: 75, category: 'backend', color: '#3776AB' },
+    { name: 'Express.js', level: 82, category: 'backend', color: '#FFFFFF' },
+    { name: 'Python', level: 85, category: 'backend', color: '#3776AB' },
+    { name: 'FastAPI', level: 80, category: 'backend', color: '#009688' },
     { name: 'REST APIs', level: 88, category: 'backend', color: '#FF6C37' },
 
+    // AI / ML (VERY IMPORTANT – boosted)
+    { name: 'LLMs', level: 90, category: 'ai', color: '#A78BFA' },
+    { name: 'RAG', level: 88, category: 'ai', color: '#7C3AED' },
+    { name: 'LangChain', level: 85, category: 'ai', color: '#339933' },
+    { name: 'Scikit-learn', level: 80, category: 'ai', color: '#F7931E' },
+    { name: 'XGBoost', level: 78, category: 'ai', color: '#FF6C37' },
+    { name: 'TensorFlow', level: 75, category: 'ai', color: '#FF6F00' },
+
+    // Databases
     { name: 'MongoDB', level: 85, category: 'database', color: '#47A248' },
-    { name: 'Firebase', level: 85, category: 'database', color: '#61DAFB' },
+    { name: 'Firebase', level: 85, category: 'database', color: '#FFCA28' },
     { name: 'ChromaDB', level: 85, category: 'database', color: '#2496ED' },
-    { name: 'Pinecone', level: 80, category: 'database', color: '#F7DF1E' },
+    { name: 'Pinecone', level: 80, category: 'database', color: '#3B82F6' },
     { name: 'MySQL', level: 78, category: 'database', color: '#4479A1' },
-    // { name: 'Redis', level: 70, category: 'database', color: '#DC382D' },
 
-    { name: 'TensorFlow', category: 'ai', color: '#A78BFA' },
-    { name: 'LangChain', category: 'ai', color: '#339933' },
-    { name: 'OpenAI', category: 'ai', color: '#2496ED' },
-    { name: 'Gemini', category: 'ai', color: '#F05032' },
-
+    // Cloud / DevOps
     { name: 'AWS', level: 72, category: 'cloud', color: '#FF9900' },
     { name: 'Docker', level: 75, category: 'cloud', color: '#2496ED' },
-    { name: 'Git', level: 90, category: 'cloud', color: '#F05032' }
+    { name: 'Git/GitHub', level: 90, category: 'cloud', color: '#F05032' }
   ];
 
   const filteredSkills =
