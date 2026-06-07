@@ -23,7 +23,7 @@ const ProjectsGrid = () => {
       title: "ConsensusAI",
       description:
         "A collaborative annotation platform that enables teams to label datasets, track annotator performance, and generate consensus-driven outputs for AI/ML training pipelines.",
-      image: "/ConsensusAI.webp",
+      image: "/consensusAI.webp",
       category: "ai",
       technologies: ["Next.js", "Tailwind CSS", "Node.js", "Express.js", "Firebase", "Context API", "DaisyUI", "Vercel"],
       liveUrl: "https://collaborative-annotation-platform.vercel.app/",
